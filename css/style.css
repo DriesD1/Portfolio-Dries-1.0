@@ -1,0 +1,636 @@
+@font-face {
+  font-family: "Source Sans Pro Black";
+  src: url("../fonts/Source_Sans_Pro_Black.woff2") format("woff2"),
+    url("../fonts/Source Sans Pro Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/Source_Sans_Pro_Bold.woff2") format("woff2"),
+    url("../fonts/Source_Sans_Pro_Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+@font-face {
+  font-family: "Source Sans Pro SemiBold";
+  src: url("../fonts/Source_Sans_Pro_SemiBold.woff2") format("woff2"),
+    url("../fonts/Source_Sans_Pro_SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+@font-face {
+  font-family: "Source Sans Pro SemiBold Italic";
+  src: url("../fonts/Source_Sans_Pro_SemiBold_Italic.woff2") format("woff2"),
+    url("../fonts/Source_Sans_Pro_SemiBold_Italic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/Source_Sans_Pro.woff2") format("woff2"),
+    url("../fonts/Source_Sans_Pro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+@font-face {
+  font-family: "Source Sans Pro Light";
+  src: url("../fonts/Source_Sans_Pro_Light.woff2") format("woff2"),
+    url("../fonts/Source_Sans_Pro_Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+@font-face {
+  font-family: "Source Sans Pro Light Italic";
+  src: url("../fonts/Source_Sans_Pro_Light_Italic.woff2") format("woff2"),
+    url("../fonts/Source_Sans_Pro_Light_Italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+@font-face {
+  font-family: "Source Sans Pro ExtraLight";
+  src: url("../fonts/Source_Sans_Pro_ExtraLight.woff2") format("woff2"),
+    url("../fonts/Source_Sans_Pro_ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+@font-face {
+  font-family: "Source Sans Pro ExtraLight Italic";
+  src: url("../fonts/Source_Sans_Pro_ExtraLight_Italic.woff2") format("woff2"),
+    url("../fonts/Source_Sans_Pro_ExtraLight_Italic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+0021-2212;
+}
+
+:root {
+  --main: hsl(0, 0%, 0%);
+  --sec: hsl(0, 0%, 100%);
+  --light: hsl(0, 0%, 8%);
+  --main-text: hsl(33, 35%, 56%);
+  --light-500: hsl(0, 1%, 21%);
+
+  --font-size--main: 1.5rem;
+
+  --font-900: "Source Sans Pro Black";
+  --font-700: "Source Sans Pro";
+  --font-600: "Source Sans Pro SemiBold";
+  --font-600-italic: "Source Sans Pro SemiBold Italic";
+  --font-400: "Source Sans Pro";
+  --font-300: "Source Sans Pro Light";
+  --font-300-italic: "Source Sans Pro Light Italic";
+  --font-200: "Source Sans Pro ExtraLight";
+  --font-200-italic: "Source Sans Pro ExtraLight Italic";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.responsive {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav__left{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mid {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.mid img{
+  width: 2rem;
+}
+
+.main__header {
+  margin: 0 auto;
+  color: var(--sec);
+  height: 70%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__img {
+  object-position: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+  z-index: -1;
+  position: absolute;
+}
+
+.navigation {
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dries {
+  color: var(--sec);
+  font-family: var(--font-900);
+  font-size: var(--font-size--main);
+}
+
+.nav__list {
+  font-family: var(--font-300);
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__list li {
+  list-style: none;
+}
+
+.list__item {
+  color: var(--sec);
+  text-decoration: none;
+}
+
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.active {
+  color: var(--main-text);
+  text-decoration: none;
+}
+
+.header__text {
+  color: var(--sec);
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.header__text h1 {
+  font-family: var(--font-200);
+  font-size: 3.5rem;
+}
+
+.header__text p {
+  font-family: var(--font-900);
+  font-size: 3rem;
+}
+
+.text__gold {
+  color: var(--main-text);
+}
+
+.header__buttons {
+  font-family: var(--font-400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.header__btn {
+  color: var(--sec);
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--sec);
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  display: block;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+
+.header__btn:hover {
+  color: var(--main-text);
+  background-color: white;
+}
+
+.about {
+  height: 43.75rem;
+  margin-top: 11.3rem;
+}
+
+@media (min-width: 50rem) {
+  .about {
+    display: flex;
+    margin-top: 11.3rem;
+  }
+}
+
+.about-me {
+  background-color: var(--light);
+}
+
+@media (min-width: 50rem) {
+  .about-me {
+    width: 50%;
+  }
+}
+
+.skills--text {
+  font-family: var(--font-600);
+  padding-top: 2rem;
+  color: var(--light-500);
+  font-size: 7rem;
+  max-width: 25rem;
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  border-radius: 2rem;
+  background-color: var(--light-500);
+  height: 1.5rem;
+}
+
+.HTML {
+  width: 80%;
+  border-radius: 2rem;
+  background-color: var(--main-text);
+  height: 1.5rem;
+}
+
+.CSS {
+  width: 70%;
+  border-radius: 2rem;
+  background-color: var(--main-text);
+  height: 1.5rem;
+}
+
+.JS {
+  width: 70%;
+  border-radius: 2rem;
+  background-color: var(--main-text);
+  height: 1.5rem;
+}
+
+.skill__texts {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--sec);
+}
+
+.about-me--text {
+  color: var(--sec);
+  border-top: 2px solid var(--main);
+  border-left: 2px solid var(--main);
+  background-color: var(--light);
+}
+
+@media (min-width: 50rem) {
+  .about-me--text {
+    border-top: none;
+    width: 50%;
+  }
+}
+
+.about-me--text h2 {
+  margin-top: 2rem;
+  letter-spacing: 6px;
+  font-family: var(--font-200);
+}
+
+.about-me--text h3 {
+  font-family: var(--font-300);
+  font-size: 2.4rem;
+  background-color: var(--main-text);
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.about__text {
+  font-family: var(--font-200);
+  margin-bottom: 1rem;
+}
+
+.services {
+  display: flex;
+  height: 32rem;
+  font-family: var(--font-200);
+  background-color: var(--main);
+  color: var(--sec);
+}
+
+.all__services {
+  gap: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.service__item {
+  background-color: var(--light);
+  border-radius: 2rem;
+  max-width: 30rem;
+  width: 100%;
+}
+
+.service__item img {
+  width: 8rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.service__item h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.service__item p {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.services--text {
+  font-family: var(--font-600);
+  padding-top: 2rem;
+  color: var(--light-500);
+  font-size: 7rem;
+  text-align: center;
+  width: 100%;
+  background-color: var(--main);
+}
+
+.contact--text {
+  font-family: var(--font-600);
+  padding-top: 2rem;
+  color: var(--light-500);
+  font-size: 7rem;
+  text-align: center;
+  background-color: var(--light);
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--light);
+  color: var(--sec);
+  font-family: var(--font-300);
+}
+
+.front-end {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.info {
+  margin: 2rem 0;
+}
+
+.contact--header {
+  color: var(--main-text);
+}
+
+.names {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.form--inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--light-500);
+  padding-left: 1rem;
+  color: var(--sec);
+}
+
+.message {
+  margin-top: 2rem;
+  padding-bottom: 6rem;
+}
+
+.pseudo-text-effect {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.5s; //will be inherited
+  //transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+  display: block;
+
+  &::after {
+    content: attr(data-after);
+    display: inline-block;
+    transform: translateY(100%);
+    position: absolute;
+    left: 0;
+    transition: inherit;
+  }
+
+  > .send {
+    display: inline-block;
+    transform: translateY(0%);
+    transition: inherit;
+  }
+
+  &:hover {
+    > .send {
+      transform: translateY(-100%);
+    }
+    &::after {
+      transform: translateY(0%);
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.wrapper > * {
+  margin-right: 2rem;
+}
+
+.bbutton {
+  font-size: 1rem;
+  background-color: var(--main-text);
+  color: var(--sec);
+  border: none;
+  border-radius: 999px;
+  margin: 2rem 0;
+}
+
+.bbutton::after,
+.send {
+  padding: 0.8rem 2.2rem;
+  min-width: 80px;
+}
+
+
+footer {
+  font-family: var(--font-300);
+  position: relative;
+}
+
+.footer__video {
+  width: 100%;
+  object-fit: cover;
+  height: 90vh;
+  filter: brightness(20%);
+  z-index: -1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.card {
+  position: absolute;
+  top: 1rem;
+  z-index: 1;
+  background-color: var(--light-500);
+  display: flex;
+  align-items: center;
+  gap: 14rem;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.footer__btn {
+  color: var(--sec);
+  cursor: pointer;
+  background: none;
+  width: 9rem;
+  margin: 2rem auto;
+  border: 1px solid var(--sec);
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  display: block;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+
+.footer__btn:hover {
+  color: var(--main-text);
+  background-color: var(--sec);
+}
+
+.projects__footer{
+  margin-top: 2rem;
+  font-size: 2.6rem;
+}
+
+.lottie-projects{
+  width: 10rem;
+}
+
+.footer--text{
+  display: flex;
+  position: absolute;
+  gap: 48rem;
+  bottom: -6.5rem;
+  left: 0.1rem;
+}
+
+.artevelde{
+  font-size: 23px;
+}
+
+.verify-artevelde{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.btn-artevelde{
+  position: absolute;
+  bottom: -12rem;
+  left: 0;
+  border-radius: 2rem;
+  border: none;
+  padding: 1rem 2rem;
+  background-color: var(--sec);
+  text-decoration: none;
+  color: var(--main);
+}
+
+.btn-artevelde:hover{
+  background-color: var(--main-text);
+  color: var(--sec);
+}
+
+.footer--artevelde{
+  left: 0.1rem;
+}
+
+.footer__nav{
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  text-align: end;
+}
+
+/* 
+{# https://www.graphicpie.com/css-text-hover-effects/ #} */
